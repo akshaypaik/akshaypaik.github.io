@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myAppThree">
+<head>
+<meta charset="ISO-8859-1">
+<title>Payment Method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+<script src="controller.js"></script>
+</head>
+<body ng-controller="myCtrlThree">
+	<h1><strong> Congratulations <strong></h1>
+	<a type="button" style="left:0%;top:0px;position:absolute" class="btn btn-info" href="Home.html"> Back to Home </a>
+	<button type="button" ng-model="random" ng-click="randomGenerator()" style="margin-left:40%;margin-top:50px;">Click here to view the Policy details </button>
+	<h2 ng-show="random"> 
+	Policy# : <p id="demo"> </p> 
+	
+	</h2>
+</body>
+</html>

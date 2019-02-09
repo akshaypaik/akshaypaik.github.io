@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html ng-app='myAppTwo'>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+<script src="controller.js"></script>
+<!--  <style>
+	ul 
+	{
+	list-style-type: none;
+	}
+	li
+	{
+	margin-top: 25px;
+	}
+</style> -->
+</head>
+<body>
+  <div ng-controller='myCtrlTwo'>
+  <div id="existingInsurance">
+	<p style="font-size:20px;color:grey"> Existing Insurances :</p>
+	<ul>
+		<li>
+			<div class="personalAuto">
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#perosnalAuto">Personal Auto</button>
+				<div class="modal" id="perosnalAuto" role="dialog">
+					<div class="modal-dialog" modal-lg> 
+						<div class="modal-content">
+							<div class="modal-header">
+								<div class="modal-title"><h3>Personal Auto</h3>
+								</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="close">
+							<span aria-hidden="true">&times;</span> 
+							</button>
+							</div>
+							<div class="modal-body">
+								<table>
+								<tr>
+								<th style="margin-right:25px;"> Policy # </th>
+								<td> 123456789 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Effective Date : </th>
+								<td> 09/12/2018 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Expiration Date : </th>
+								<td> 09/12/2019 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> VIN : </th>
+								<td> 254789 </td>
+								</tr>
+								</table>
+								<a type="button" class="btn btn-success" href="Payment.html"> Renew </a>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">
+									Close
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li> 
+			<div class="commercialAuto">
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#commercialAuto">Commercial Auto</button>
+				<div class="modal" id="commercialAuto" role="dialog">
+					<div class="modal-dialog" modal-lg> 
+						<div class="modal-content">
+							<div class="modal-header">
+								<div class="modal-title"><h3>Commercial Auto</h3>
+								</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="close">
+							<span aria-hidden="true">&times;</span> 
+							</button>
+							</div>
+							<div class="modal-body">
+								<table>
+								<tr>
+								<th style="margin-right:25px;"> Policy # </th>
+								<td> 256324879 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Effective Date : </th>
+								<td> 06/09/2018 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Expiration Date : </th>
+								<td> 06/09/2019 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> VIN : </th>
+								<td> 859632 </td>
+								</tr>
+								</table>
+								<a type="button" class="btn btn-success" href="Payment.html"> Renew </a>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">
+									Close
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li> 
+			<div class="propertyCasualty">
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#propertyCasualty">Property Casualty</button>
+				<div class="modal" id="propertyCasualty" role="dialog">
+					<div class="modal-dialog" modal-lg> 
+						<div class="modal-content">
+							<div class="modal-header">
+								<div class="modal-title"><h3>Property Casualty</h3>
+								</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="close">
+							<span aria-hidden="true">&times;</span> 
+							</button>
+							</div>
+							<div class="modal-body">
+								<table>
+								<tr>
+								<th style="margin-right:25px;"> Policy # </th>
+								<td> 659824852 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Effective Date : </th>
+								<td> 05/5/2018 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Expiration Date : </th>
+								<td> 05/05/2019 </td>
+								</tr>
+								</table>
+								<a type="button" class="btn btn-success" href="Payment.html"> Renew </a>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">
+									Close
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li> 
+			<div class="homeInsurance">
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#homeInsurance">Home Insurance</button>
+				<div class="modal" id="homeInsurance" role="dialog">
+					<div class="modal-dialog" modal-lg> 
+						<div class="modal-content">
+							<div class="modal-header">
+								<div class="modal-title"><h3>Home Insurance</h3>
+								</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="close">
+							<span aria-hidden="true">&times;</span> 
+							</button>
+							</div>
+							<div class="modal-body">
+								<table>
+								<tr>
+								<th style="margin-right:25px;"> Policy # </th>
+								<td> 3598248785 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Effective Date : </th>
+								<td> 08/27/2018 </td>
+								</tr>
+								<tr>
+								<th style="margin-right:25px;"> Expiration Date : </th>
+								<td> 08/27/2019 </td>
+								</tr>
+								</table>
+								<a type="button" class="btn btn-success" href="Payment.html"> Renew </a>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">
+									Close
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+  </div>
+  <div id="newInsurance">
+  <div id="first">
+		<h1><span style="color:red;font-family: 'K2D', sans-serif;"> Please select an Insurance which you want to BUY : </span></h1>
+  </div>
+	<div id="select">
+		<select ng-model="selectedInsurance" ng-options="insuranceList for insuranceList in insuranceList" ng-change="display()">
+		</select>
+	</div>
+		<h2 style="font-family: 'K2D', sans-serif;" ng-show="selectedInsurance"> You have selected :<span style="color:lightblue""> {{selectedInsurance}} </span> </h2>
+		<div id="detailsInsurance">
+			<div ng-show="lifeFlag">
+				<p>Life insurance (or life assurance, especially in the Commonwealth of Nations) is a contract between an insurance policy holder and an insurer or assurer, where the insurer promises to pay a designated beneficiary a sum of money (the benefit) in exchange for a premium, upon the death of an insured person (often the policy holder). Depending on the contract, other events such as terminal illness or critical illness can also trigger payment. The policy holder typically pays a premium, either regularly or as one lump sum. Other expenses, such as funeral expenses, can also be included in the benefits.</p>
+				<p>Life policies are legal contracts and the terms of the contract describe the limitations of the insured events. Specific exclusions are often written into the contract to limit the liability of the insurer; common examples are claims relating to suicide, fraud, war, riot, and civil commotion. </p>
+				<strong style="font-size:18px;"> Please select the Term : </strong>
+				<br/>
+				<label>	
+					<abbr title="click to select annual term">
+						<input type="checkbox" ng-model="lifePriceAnnual" ng-change="annualDisable(lifePriceAnnual)" ng-disabled="checkValueAnnual"> Annual 
+					</abbr> 
+				</label>
+				<br/>
+				<label>
+					<abbr title="click to select six months term">
+						<input type="checkbox" ng-model="lifePriceSix"  ng-change="sixDisable(lifePriceSix)" ng-disabled="checkValueSix"> 6 Months 
+					</abbr> 
+				</label>
+				<br/>
+				<p ng-show="lifePriceAnnual"> <strong style="color:brown"> Price :</strong> <span style="color:black"> $4500 </span> </p>
+				<p ng-show="lifePriceSix"> <strong style="color:brown">Price :</strong> <span style="color:black"> $2500 </span> </p>
+			</div>
+			<div ng-show="healthFlag">
+				<p>Health insurance is insurance that covers the whole or a part of the risk of a person incurring medical expenses, spreading the risk over a large number of persons. By estimating the overall risk of health care and health system expenses over the risk pool, an insurer can develop a routine finance structure, such as a monthly premium or payroll tax, to provide the money to pay for the health care benefits specified in the insurance agreement. The benefit is administered by a central organization such as a government agency, private business, or not-for-profit entity.</p>
+				<p>According to the Health Insurance Association of America, health insurance is defined as "coverage that provides for the payments of benefits as a result of sickness or injury. It includes insurance for losses from accident, medical expense, disability, or accidental death and dismemberment" </p>
+				<strong style="font-size:18px;"> Please select the Term : </strong>
+				<br/>
+				<label>	
+					<abbr title="click to select annual term">
+						<input type="checkbox" ng-model="healthPriceAnnual" value="annual" ng-change="annualDisable(healthPriceAnnual)" ng-disabled="checkValueAnnual"> Annual 
+					</abbr>
+				</label>
+				<br/>
+				<label>
+					<abbr title="click to select six months term">
+						<input type="checkbox" ng-model="healthPriceSix" ng-change="sixDisable(healthPriceSix)" ng-disabled="checkValueSix"> 6 Months
+					</abbr>
+				</label>
+				<br/>
+				<p ng-show="healthPriceAnnual"> <strong style="color:brown">Price :</strong> <span style="color:black"> $3500 </span> </p>
+				<p ng-show="healthPriceSix"> <strong style="color:brown">Price :</strong> <span style="color:black"> $2000 </span> </p>
+			</div>
+			<div ng-show="casualtyFlag">
+				<p>Casualty insurance is mainly liability coverage of an individual or organization for negligent acts or omissions. However, the term has also been used for property insurance,[citation needed] aviation insurance, boiler and machinery insurance, and glass[clarification needed] and crime insurance. It may include marine insurance for shipwrecks or losses at sea, fidelity and surety insurance, earthquake insurance, political risk insurance, terrorism insurance, fidelity and surety bonds.</p>
+				<p>One of the most common kinds of casualty insurance today is automobile insurance. In its most basic form, automobile insurance provides liability coverage in the event that a driver is found "at fault" in an accident. This can cover medical expenses of individuals involved in the accident as well as restitution or repair of damaged property, all of which would fall into the realm of casualty insurance coverage.</p>
+				<strong style="font-size:18px;"> Please select the Term : </strong>
+				<br/>
+				<label>	
+					<abbr title="click to select annual term">
+						<input type="checkbox" ng-model="casualtyPriceAnnual" ng-change="annualDisable(casualtyPriceAnnual)" ng-disabled="checkValueAnnual"> Annual 
+					</abbr>
+				</label>
+				<br/>
+				<label>
+					<abbr title="click to select six months term">
+						<input type="checkbox" ng-model="casualtyPriceSix" ng-change="sixDisable(casualtyPriceSix)" ng-disabled="checkValueSix"> 6 Months
+					</abbr>
+				</label>
+				<br/>
+				<p ng-show="casualtyPriceAnnual"> <strong style="color:brown">Price :</strong> <span style="color:black"> $6000 </span> </p>
+				<p ng-show="casualtyPriceSix"> <strong style="color:brown">Price :</strong> <span style="color:black"> $3500 </span> </p>
+			</div>
+	</div>
+
+<!-- <script>
+var app=angular.module('myApp',[]);
+app.controller('myCtrl',function($scope)
+{
+$scope.insuranceList=['Life Insurance','Health Insurance','Casualty Insurance'];
+$scope.display= function()
+{
+if($scope.selectedInsurance=='Life Insurance')
+{
+$scope.lifeFlag=true;
+$scope.healthFlag=false;
+$scope.casualtyFlag=false;
+}
+else if($scope.selectedInsurance=='Health Insurance')
+{
+$scope.lifeFlag=false;
+$scope.healthFlag=true;
+$scope.casualtyFlag=false;
+}
+else
+{
+$scope.lifeFlag=false;
+$scope.healthFlag=false;
+$scope.casualtyFlag=true;
+}
+}
+});
+</script> -->
+			<a href="Payment.html" class="next" ng-show="lifePriceAnnual">Next &raquo;</a>
+			<a href="Payment.html" class="next" ng-show="lifePriceSix">Next &raquo;</a>
+			<a href="Payment.html" class="next" ng-show="healthPriceAnnual">Next &raquo;</a>
+			<a href="Payment.html" class="next" ng-show="healthPriceSix">Next &raquo;</a>
+			<a href="Payment.html" class="next" ng-show="casualtyPriceAnnual">Next &raquo;</a>
+			<a href="Payment.html" class="next" ng-show="casualtyPriceSix">Next &raquo;</a>
+			<a style="left:90%;top:-25px;position:absolute" type="button" class="btn btn-danger" href="Login.html"> Log Out </a>
+    </div>
+</body>
+</html>

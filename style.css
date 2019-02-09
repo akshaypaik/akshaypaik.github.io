@@ -1,0 +1,126 @@
+	h1
+	{
+		text-align:center;
+	}
+	#detailsInsuranceils p
+	{
+		margin-left:25%;
+	}
+	#submit
+	{
+		margin-left:15%;
+		margin-top:5%;
+	}
+	#reset
+	{
+		margin-left:25px;
+		margin-top:5%;
+	}
+	body
+	{
+   		background-color:white;
+	}
+	h2
+	{
+    	text-align: center;
+	}
+	#select
+    {
+    	margin-left: 45%;
+    }
+	h3
+	{
+    	text-align: center;
+    }
+    #select
+    {
+    	margin-left=50%;
+    }
+    #detailsInsurance
+    {
+    	font-family: 'K2D', sans-serif;
+    	color:grey;
+    }
+    a 
+    {
+    	text-decoration: none;
+    	display: inline-block;
+    	padding: 8px 16px;
+	}
+	a:hover 
+	{
+    	background-color: #ddd;
+    	color: black;
+    	text-decoration:none;
+	}
+	.next 
+	{
+    	background-color: #4CAF50;
+    	color: white;
+    	float:right;
+    	margin-top:50px;
+    	margin-right:25px;
+	}
+	#first
+	{
+		text-align:center;
+	}
+	input.ng-invalid.ng-touched
+	{
+		/*background-color:#FF4500;*/
+		border: 1px solid #DA3637;
+	}
+	input.ng-valid
+	{
+		/*background-color:lightgreen;*/
+		border: 1px solid #509D12;
+	}
+	#paymentSubmit
+	{
+		margin-top:150px;
+	}
+	#paymentReset
+	{
+		margin-top:150px;
+	}
+	.css-form input.ng-invalid.ng-touched 
+	{
+    	background-color: #FA787E;
+	}
+	#existingInsurance ul li 
+	{
+		list-style-type: none;
+	}
+	li
+	{
+		margin-top: 25px;
+	}
+	#newInsurance
+	{
+		position: absolute;
+		margin: 20px 0 0 250px;
+		top: 10px;
+		left: 150px;
+	}
+	#existingInsurance
+	{
+		margin-top: 60px;
+		margin-left: 15px;
+	}
+	.formAdjust
+	{
+		margin-left:35%;
+		margin-top:3%;	
+		margin-bottom:6%;
+	}
+	abbr[title]
+	{
+		border-bottom: none !important;
+		cursor: inherit !important;
+		text-decoration: none !important;
+	}
+	
+	
+											
+	
+	

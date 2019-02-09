@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html ng-app="myAppThree">
+<head>
+<meta charset="ISO-8859-1">
+<title>Payment Method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+<script src="controller.js"></script>
+</head>
+<body ng-controller="myCtrlThree" class="container" style="text-align:center;font-size:25px;font-color:blue;">
+	<p><strong> Payment Method : </strong></p>
+	<a type="button" style="left:0%;top:0px;position:absolute" class="btn btn-info" href="Home.html"> Back to Home </a>
+	<form action="Confirmation.html" name="myForm" class="form-horizontal" onsubmit="" ng-model="myForm">
+		<fieldset>
+			<legend style="text-align:left;color:blue"><strong>Basic Info:</strong></legend>
+		<div class="container">
+			<div class="row">
+				<label for="inputFirstname" class="col-lg-2"> First Name: </label>
+				<div class="col-lg-8">
+					<input type="text" class="form-control" name="firstname" placeholder="First Name" autofocus="autofocus" ng-model="firstname" ng-required="true">
+					<span ng-show="myForm.firstname.$touched && myForm.firstname.$dirty && myForm.firstname.$error.required" style="color:red;font-size:12px;">Firstname is required</span>
+				</div>
+				<br/>
+				<br/>
+				<label for="inputLastname" class="col-lg-2"> Last Name: </label>
+				<div class="col-lg-8">
+					<input type="text" class="form-control" name="lastname" placeholder="Last Name" ng-model="lastname" required/>
+					<span ng-show="myForm.lastname.$dirty && myForm.lastname.$error.required" style="color:red;font-size:12px;">Lastname is required</span>
+				</div>
+				<br>
+				<br>
+				<label for="inputDate" class="col-lg-2"> Date of Birth: </label>
+				<div class="col-lg-8">
+					<input type="date" class="form-control" name="dob" placeholder="Date of Birth" ng-model="dob" required/>
+				</div>
+				<br>
+				<br>
+				<label for="inputAddress" class="col-lg-2"> Address: </label>
+				<div class="col-lg-8">
+					<input type="text" class="form-control" name="address" placeholder="Street Address" ng-model="addressone" required/>
+					<input type="text" class="form-control" name="address" placeholder="Street Address Line 2" ng-model="addresstwo" required/>
+					<label for="city" class="col-sm-4"> City: </label>
+					<div class="col-sm-3" style="margin-left:-90px;">
+					<input type="text" class="form-control" name="city" placeholder="City" ng-model="city" required/>
+					</div>
+					<label for="city" class="col-sm-4"> Zip Code: </label>
+					<div class="col-sm-3" style="margin-left:-60px;">
+					<input type="number" class="form-control" name="zipcode" ng-model="zipcode" placeholder="######" ng-model="zipcode" pattern="[0-9]{6}" required/>
+					<span ng-show="myForm.zipcode.$dirty && myForm.zipcode.$invalid" style="color:red;font-size:12px;"> Invalid ZipCode </span>
+					</div>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<label for="inputEmail" class="col-lg-2"> Email: </label>
+				<div class="col-lg-8">
+					<input type="email" class="form-control" name="email" placeholder="akshay@gmail.com" ng-model="email" required/>
+					<span ng-show="myForm.email.$error.email" style="color:red;font-size:12px;"> Invalid Email ID </span>
+				</div>
+				<br>
+				<br>
+				<label for="inputPhone" class="col-lg-2"> Phone Number: </label>
+				<div class="col-lg-8">
+					<br/>
+					<input type="phone" class="form-control" name="phone" placeholder="Phone Number" ng-model="phone" pattern="[0-9]{10}" required/>
+					<span ng-show="myForm.phone.$dirty && myForm.phone.$invalid" style="color:red;font-size:12px;"> Please enter the Valid phone number </span>
+				</div>	
+				<br/>
+				<br/>
+				<br/>
+				<label for="inputGender" class="col-lg-2"> Gender: </label>
+				<div class="col-lg-8">
+					<label style="color:grey">
+						<input type="radio" ng-model="selectedGender" value="male">Male
+					</label> 
+					<label style="color:grey">
+						<input type="radio" style="margin-left:25px;" ng-model="selectedGender" value="female">Female 
+					</label>
+				<div>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend style="text-align:left;color:blue"><strong>Payment Method:</strong></legend>
+					<label for:inputSelectBank> <h4> Please select a payment method : </h4> </label>
+					<select ng-model="selectedPayment" required>
+						<option value="Net Banking">Net Banking
+						<option value="Fund Transfer">Fund Transfer
+						<option value="Credit Card">Credit Card
+						<option value="Debit Card">Debit Card
+					</select>
+					<div ng-switch="selectedPayment" required>
+						<div ng-switch-when="Net Banking">
+							<h5> Please Select a Bank </h5>
+							<select ng-model="selectedBank">
+							<option value="SBI Bank">SBI Bank
+							<option value="HDFC Bank">HDFC Bank
+							<option value="Yes Bank">Yes Bank
+							<option value="Kotak Bank">Kotak Bank
+							<option value="Canara Bank">Canara Bank
+							</select>
+							<div ng-switch="selectedBank">
+								<div ng-switch-when="SBI Bank">
+									<br>
+									<a href="https://www.onlinesbi.com/"> Click here to redirect to SBI Netbanking </a>
+								</div>
+							</div>
+						</div>
+						<div ng-switch-when="Fund Transfer">
+							<h2> Sorry, Currently Fund Trasfer option is not available!!! </h2>
+						</div>
+						<div ng-switch-when="Credit Card">
+							<div class="container">
+								<div class="row">
+									<label for="inputCard" class="col-lg-2"> Card Number: </label>
+										<div class="col-lg-8">
+											<input type="text" class="form-control" name="creditcardnumber" placeholder="Card Number" pattern="[0-9]{16}" ng-model="creditcardnumber" pattern="\d{4}-\d{4}-\d{4}-\d{4}" required/>
+											<span ng-show="myForm.creditcardnumber.$dirty && myForm.creditcardnumber.$invalid" style="color:red;font-size:12px;">Invalid Card Number </span>
+											<br>
+											<br>
+											<label for="inputcvv" class="col-sm-4"> Cvv: </label>
+											<div class="col-sm-3" style="margin-left:-90px;">
+											<input type="number" class="form-control" name="cvv" placeholder="CVV" pattern="[0-9]{3}" ng-model="ccvv" ng-maxlength="3" required/>
+											<span ng-show="myForm.cvv.$dirty && myForm.cvv.$error.required" style="color:red;font-size:12px;">cvv is required</span>											<span ng-show="myForm.cvv.$dirty && myForm.cvv.$invalid" style="color:red;font-size:12px;"> cvv is invalid </span>
+											</div>
+											<label for="expiredate" class="col-sm-4"> Expire Date: </label>
+											<div class="col-sm-3" style="margin-left:-60px;">
+											<input type="text" class="form-control" name="expiredate" placeholder="mm/yyyy" pattern="\d{2}/\d{4}" ng-model="expiredate" required/>
+											<span ng-show="myForm.expiredate.$dirty && myForm.expiredate.$invalid" style="color:red;font-size:12px;"> Invalid Expire Date </span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div ng-switch-when="Debit Card">
+							<div class="container">
+								<div class="row">
+									<label for="inputCard" class="col-lg-2"> Card Number: </label>
+										<div class="col-lg-8">
+											<input type="number" class="form-control" name="debitcardnumber" placeholder="Card Number" pattern="[0-9]{16}" ng-model="debitcardnumber" required/>
+											<span ng-show="myForm.debitcardnumber.$dirty && myForm.debitcardnumber.$invalid" style="color:red;font-size:12px;">Invalid Card Number </span>
+											<br>
+											<br>
+											<label for="inputcvv" class="col-sm-4"> Cvv: </label>
+											<div class="col-sm-3" style="margin-left:-90px;">
+											<input type="number" class="form-control" name="cvv" placeholder="CVV" pattern="[0-9]{3}" ng-model="dcvv" ng-maxlength="3" required/>
+											<span ng-show="myForm.cvv.$dirty && myForm.cvv.$error.required" style="color:red;font-size:12px;">cvv is required</span>
+											<span ng-show="myForm.cvv.$dirty && myForm.cvv.$invalid" style="color:red;font-size:12px;"> cvv is invalid </span>
+											</div>
+											<label for="expiredate" class="col-sm-4"> Expire Date: </label>
+											<div class="col-sm-3" style="margin-left:-60px;">
+											<input type="number" class="form-control" name="expiredate" placeholder="Expire Date" pattern="[0-12]/[0-99]" required/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<input type="submit" href="#!confirmation" id="paymentSubmit" class="btn btn-success" value="Submit" ng-click="confirmUser()" name="submit" ng-disabled="myForm.$invalid">
+		<input type="reset" id="paymentReset" ng-click="reset()" class="btn btn-danger" value="Reset" name="reset">
+	</form>
+</body>
+</html>

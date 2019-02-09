@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myAppOne">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insurance Portal</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--  <script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.reset = function(){
+		$scope.name = '';
+		
+	}
+})
+</script> -->
+<script src="controller.js"></script>
+</head>
+<body>
+	<div ng-controller="myCtrlOne">
+		<div class="container">
+		<h1> Hi, {{name}} </h1>
+		<div class="formAdjust">
+			<form name="myForm">
+				<div class="form-group">
+					<p><label for="username"> UserName :</label> 
+					<div class="col-lg-6">
+					<input type=text" id="name" class="form-control" name="username" ng-model="name" placeholder="Name" autofocus="autofocus" ng-model="username" ng-minlength="6" ng-required="true"></p>
+					<span ng-show="myForm.username.$dirty && myForm.username.$error.required" style="color:red"> Username is required</span>
+		<!-- <span ng-if="!myForm.username.$valid"> Username is not Valid</span> -->
+					</div>
+				</div>
+		<br/>
+		<br/>
+		<br/>
+				<div class="form-group">
+					<p><label for="password"> Password :</label> 
+					<div class="col-lg-6">
+					<input type="password" id="password" class="form-control" name="password" placeholder="Password" ng-model="password" required></p>
+					<span ng-show="myForm.password.$dirty && myForm.password.$error.required" class="help-block" style="color:red">Password is required</span>
+					</div>
+		<br>
+		<br>
+				</div>
+				<br>
+				<button type="submit" id="submit" class="btn btn-success" value="Login" ng-disabled="myForm.$invalid" ng-click="submitLogin()">Login </button>
+				<input type="reset" id="reset" class="btn btn-danger" name="reset" value="Reset" ng-click="reset()">
+			</form>
+		</div>
+	</div>
+	<!--<div ng-view></div>-->
+	</div>
+</body>
+</html>
